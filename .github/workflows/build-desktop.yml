@@ -59,6 +59,9 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Build desktop assets
+        run: pnpm build
+
       - name: Create macOS icon
         if: runner.os == 'macOS'
         run: bash scripts/generate-macos-icon.sh
@@ -119,4 +122,3 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release upload "$RELEASE_TAG" dist-release/* --clobber
-
