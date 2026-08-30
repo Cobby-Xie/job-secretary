@@ -26,8 +26,8 @@
     "test": "node --test tests/*.test.cjs",
     "typecheck": "tsc --noEmit",
     "pack": "electron-builder --dir --win",
-    "dist:win": "electron-builder --win portable",
-    "dist:mac": "electron-builder --mac dmg zip --universal",
+    "dist:win": "electron-builder --win portable --publish never",
+    "dist:mac": "electron-builder --mac dmg zip --universal --publish never",
     "dev:site": "node node_modules/vinext/dist/cli.js dev",
     "build:site": "node node_modules/vinext/dist/cli.js build"
   },
@@ -92,4 +92,3 @@
   },
   "type": "module"
 }
-
