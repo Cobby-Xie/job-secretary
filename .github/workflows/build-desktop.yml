@@ -50,6 +50,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
+        # pnpm 11 runs only the explicitly trusted native build scripts from package.json.
         run: pnpm install --frozen-lockfile
 
       - name: Type-check
