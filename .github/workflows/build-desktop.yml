@@ -69,6 +69,7 @@ jobs:
       - name: Build package
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        # Installation files are published only after both platforms build successfully.
         run: ${{ matrix.command }}
 
       - name: Upload build artifact
