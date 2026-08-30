@@ -17,6 +17,8 @@
 
 当前测试版：**v0.1.3**
 
+[下载 macOS 版（DMG，Intel / Apple Silicon 通用）](https://github.com/Cobby-Xie/job-secretary/releases/download/v0.1.3/Job-Secretary-0.1.3-macOS-Universal.dmg) · [下载 Windows 版（EXE）](https://github.com/Cobby-Xie/job-secretary/releases/download/v0.1.3/Job-Secretary-0.1.3-Windows-x64.exe) · [查看全部下载和校验码](https://github.com/Cobby-Xie/job-secretary/releases/tag/v0.1.3)
+
 - Windows 10 / 11 x64：下载 `Job-Secretary-0.1.3-Windows-x64.exe`。
 - macOS 11 及以上：下载 `Job-Secretary-0.1.3-macOS-Universal.dmg`，同时支持 Intel 与 Apple Silicon。
 - 两个平台均无需单独安装 Node.js。当前测试包尚未购买代码签名证书，系统可能显示未知开发者提示；请只从本项目 Release 页面下载并核对 `SHA256SUMS.txt`。
@@ -145,4 +147,3 @@ scripts/             构建与质量检查脚本
 ## 许可证与第三方资源
 
 项目自有源代码使用 [MIT License](LICENSE)。第三方 DOCX 模板、商标和外部网站内容不自动适用 MIT License，具体范围见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
-
