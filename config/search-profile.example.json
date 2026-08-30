@@ -1,0 +1,9 @@
+{
+  "keywords": ["产品经理", "数据分析"],
+  "locations": ["上海", "杭州"],
+  "employmentTypes": ["校招", "实习"],
+  "freshnessHours": 48,
+  "preferredCompanies": [],
+  "excludedKeywords": ["外包"],
+  "scanSchedule": ["07:30", "15:30"]
+}
