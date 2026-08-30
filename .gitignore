@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
 /.git-publish/
+/resources/求职秘书.icns
 /.pnpm-store/
 /.pnp
 .pnp.*
@@ -58,3 +59,4 @@ next-env.d.ts
 tsconfig.tsbuildinfo
 *.key
 *.secret
+

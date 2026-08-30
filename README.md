@@ -1,25 +1,25 @@
 # 求职秘书 Job Secretary
 
-![Release](https://img.shields.io/badge/release-v0.1.2-1769e8)
-![Platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078d4)
+![Release](https://img.shields.io/badge/release-v0.1.3-1769e8)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-0078d4)
 ![Local first](https://img.shields.io/badge/data-local--first-24a148)
 ![Code license](https://img.shields.io/badge/code%20license-MIT-f0c000)
 
 ![求职秘书产品封面](public/job-secretary-social.png)
 
-一款面向 Windows 的本地优先求职工作台：按省市发现企业与官方招聘入口，保存岗位 JD，分析岗位匹配度，管理和定制简历，练习每日面试题，并追踪每一次投递。
+一款面向 Windows 与 macOS 的本地优先求职工作台：按省市发现企业与官方招聘入口，保存岗位 JD，分析岗位匹配度，管理和定制简历，练习每日面试题，并追踪每一次投递。
 
 > 求职秘书不是“一键自动海投”工具。软件不会绕过登录、验证码或网站限制，也不会代替用户点击最终提交。
 
-**English summary:** A local-first Windows job-search workspace for company discovery, official career links, JD-to-resume matching, resume tailoring, interview practice, and application tracking. Users remain in control of every final application.
+**English summary:** A local-first Windows and macOS job-search workspace for company discovery, official career links, JD-to-resume matching, resume tailoring, interview practice, and application tracking. Users remain in control of every final application.
 
 ## 下载安装
 
-当前测试版：**v0.1.2**
+当前测试版：**v0.1.3**
 
-- Windows 10 / 11，x64。
-- 下载 Release 中的 `求职秘书-0.1.2-Windows-x64.exe`，双击即可使用，无需单独安装 Node.js。
-- 当前安装包尚未购买代码签名证书，Windows 可能显示“未知发布者”；请核对 Release 页面中的 SHA-256。
+- Windows 10 / 11 x64：下载 `Job-Secretary-0.1.3-Windows-x64.exe`。
+- macOS 11 及以上：下载 `Job-Secretary-0.1.3-macOS-Universal.dmg`，同时支持 Intel 与 Apple Silicon。
+- 两个平台均无需单独安装 Node.js。当前测试包尚未购买代码签名证书，系统可能显示未知开发者提示；请只从本项目 Release 页面下载并核对 `SHA256SUMS.txt`。
 - 软件不内置任何共享 AI Key。使用云端 AI 时，需要用户自行从相应开发者平台取得 API Key。
 
 ## 核心功能
@@ -91,13 +91,13 @@
 ## 本地数据与隐私
 
 - 简历、岗位、投递记录和 AI 设置默认保存在当前电脑的应用私有目录。
-- 选择“记住密钥”时，桌面版使用 Windows 安全存储能力加密 API Key。
+- 选择“记住密钥”时，桌面版使用 Windows 安全存储或 macOS 钥匙串能力加密 API Key。
 - 完整备份不会导出 API Key。
 - 请勿把真实简历、照片、投递记录、备份或本地配置提交到公开 GitHub 仓库。
 
 ## 本地开发
 
-要求：Windows、Node.js 22.13+、pnpm。
+要求：Windows 或 macOS、Node.js 22.13+、pnpm。
 
 ```powershell
 pnpm install
@@ -111,6 +111,7 @@ pnpm typecheck
 pnpm test
 pnpm build
 pnpm dist:win
+pnpm dist:mac
 ```
 
 打包文件默认输出到 `release` 目录。`release*`、构建缓存、用户数据、导出简历和 API Key 配置均已被 `.gitignore` 排除。
@@ -130,7 +131,7 @@ scripts/             构建与质量检查脚本
 
 ## 当前状态
 
-- v0.1.2：Windows x64 测试版。
+- v0.1.3：Windows x64 与 macOS Universal 测试版。
 - TypeScript 检查通过，14 项自动测试通过。
 - 企业招聘网站结构差异较大，通用扫描无法保证读取所有动态岗位；最终结果必须以企业官网为准。
 - 安装包尚未代码签名，也没有自动更新功能。
@@ -144,3 +145,4 @@ scripts/             构建与质量检查脚本
 ## 许可证与第三方资源
 
 项目自有源代码使用 [MIT License](LICENSE)。第三方 DOCX 模板、商标和外部网站内容不自动适用 MIT License，具体范围见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+

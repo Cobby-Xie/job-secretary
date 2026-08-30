@@ -1,6 +1,6 @@
 {
   "name": "job-secretary",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "author": "求职秘书项目",
   "description": "本地优先的求职岗位发现、JD 分析、简历建议与投递跟踪桌面应用",
@@ -27,6 +27,7 @@
     "typecheck": "tsc --noEmit",
     "pack": "electron-builder --dir --win",
     "dist:win": "electron-builder --win portable",
+    "dist:mac": "electron-builder --mac dmg zip --universal",
     "dev:site": "node node_modules/vinext/dist/cli.js dev",
     "build:site": "node node_modules/vinext/dist/cli.js build"
   },
@@ -62,7 +63,9 @@
     "executableName": "求职秘书",
     "electronDownload": {
       "checksums": {
-        "electron-v43.4.1-win32-x64.zip": "c2ef9a5f65472c34d14bd3e67b7d14e66b0c01f124aba45263d6a4232160e13a"
+        "electron-v43.4.1-win32-x64.zip": "c2ef9a5f65472c34d14bd3e67b7d14e66b0c01f124aba45263d6a4232160e13a",
+        "electron-v43.4.1-darwin-x64.zip": "4fd0f1826660a94216a0633600a3c3e2cd87ee9e4bc6f0e1edf717ad8e30c10b",
+        "electron-v43.4.1-darwin-arm64.zip": "fe3cac8cbfd9ba1739fac6c69166cf30848741f93cbe251d800ae6ef7cebb64b"
       }
     },
     "asar": true,
@@ -73,8 +76,20 @@
     "win": {
       "icon": "resources/求职秘书-icon.png",
       "target": [{ "target": "portable", "arch": ["x64"] }],
-      "artifactName": "求职秘书-${version}-Windows-x64.${ext}"
+      "artifactName": "Job-Secretary-${version}-Windows-x64.${ext}"
+    },
+    "mac": {
+      "icon": "resources/求职秘书.icns",
+      "category": "public.app-category.productivity",
+      "minimumSystemVersion": "11.0",
+      "hardenedRuntime": true,
+      "target": [
+        { "target": "dmg", "arch": ["universal"] },
+        { "target": "zip", "arch": ["universal"] }
+      ],
+      "artifactName": "Job-Secretary-${version}-macOS-Universal.${ext}"
     }
   },
   "type": "module"
 }
+
