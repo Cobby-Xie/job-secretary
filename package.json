@@ -1,0 +1,80 @@
+{
+  "name": "job-secretary",
+  "version": "0.1.2",
+  "private": true,
+  "author": "求职秘书项目",
+  "description": "本地优先的求职岗位发现、JD 分析、简历建议与投递跟踪桌面应用",
+  "license": "MIT",
+  "homepage": "https://github.com/Cobby-Xie/job-secretary#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cobby-Xie/job-secretary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cobby-Xie/job-secretary/issues"
+  },
+  "keywords": ["job-search", "resume-builder", "job-tracker", "electron", "react", "typescript", "local-first", "ai-assistant"],
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node desktop/start-dev.cjs",
+    "dev:ui": "vite --host 127.0.0.1",
+    "build": "node desktop/build.cjs",
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "typecheck": "tsc --noEmit",
+    "pack": "electron-builder --dir --win",
+    "dist:win": "electron-builder --win portable",
+    "dev:site": "node node_modules/vinext/dist/cli.js dev",
+    "build:site": "node node_modules/vinext/dist/cli.js build"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.15",
+    "docx": "^9.5.1",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.10.0",
+    "next": "16.2.6",
+    "node-html-parser": "^7.0.1",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
+    "@openai/sites-vite-plugin": "0.2.0",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "electron": "43.4.1",
+    "electron-builder": "^26.0.12",
+    "esbuild": "0.27.3",
+    "typescript": "5.9.3",
+    "vinext": "1.0.0-beta.3",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "build": {
+    "appId": "cn.jobsecretary.desktop",
+    "productName": "求职秘书",
+    "executableName": "求职秘书",
+    "electronDownload": {
+      "checksums": {
+        "electron-v43.4.1-win32-x64.zip": "c2ef9a5f65472c34d14bd3e67b7d14e66b0c01f124aba45263d6a4232160e13a"
+      }
+    },
+    "asar": true,
+    "beforeBuild": "desktop/before-build.cjs",
+    "extraMetadata": { "main": "dist-desktop/main.cjs" },
+    "directories": { "output": "release" },
+    "files": ["dist-ui/**/*", "dist-desktop/**/*", "desktop/preload.cjs", "resources/**/*", "简历模板/**/*", "package.json"],
+    "win": {
+      "icon": "resources/求职秘书-icon.png",
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "artifactName": "求职秘书-${version}-Windows-x64.${ext}"
+    }
+  },
+  "type": "module"
+}

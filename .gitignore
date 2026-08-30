@@ -1,0 +1,60 @@
+# dependencies
+/node_modules
+/.git-publish/
+/.pnpm-store/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/qa/
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local environment
+.env*
+
+# deployment and generated files
+.vercel
+next-env.d.ts
+/dist/
+/.wrangler/
+/outputs/
+/work/
+
+# desktop build output and local private data
+/dist-ui/
+/dist-desktop/
+/release/
+/release-*/
+/.cache/
+/user-data/
+/private/
+/resumes/
+/exports/
+/backups/
+/my-materials/
+/personal-data/
+/screenshots-private/
+/config/*.local.json
+tsconfig.tsbuildinfo
+*.key
+*.secret
