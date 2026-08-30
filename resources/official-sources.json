@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "notice": "仅登记企业公开招聘官网。页面结构变化时需要更新适配器；扫描失败不会把岗位标记为开放。",
+  "sources": [
+    { "name": "字节跳动招聘官网", "company": "字节跳动", "shortName": "字", "url": "https://jobs.bytedance.com/", "accent": "#1769ea", "adapter": "html", "enabled": true },
+    { "name": "腾讯招聘官网", "company": "腾讯", "shortName": "T", "url": "https://careers.tencent.com/", "accent": "#08a8ea", "adapter": "html", "enabled": true },
+    { "name": "小米招聘官网", "company": "小米集团", "shortName": "mi", "url": "https://hr.xiaomi.com/", "accent": "#ff6900", "adapter": "html", "enabled": true },
+    { "name": "美团招聘官网", "company": "美团", "shortName": "M", "url": "https://zhaopin.meituan.com/", "accent": "#e9b900", "adapter": "html", "enabled": true },
+    { "name": "京东招聘官网", "company": "京东", "shortName": "JD", "url": "https://zhaopin.jd.com/", "accent": "#e1251b", "adapter": "html", "enabled": true }
+  ]
+}
